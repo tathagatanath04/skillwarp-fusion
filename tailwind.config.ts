@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				eduforge: {
+					50: '#f0f1fe',
+					100: '#e5e7fd',
+					200: '#d0d3fb',
+					300: '#b3b9f8',
+					400: '#9094f3',
+					500: '#786eed',
+					600: '#6a52e3',
+					700: '#5a42d0',
+					800: '#4a37a9',
+					900: '#3f3585',
+					950: '#241e55',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +88,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				spotlight: {
+					'0%': { opacity: '0', transform: 'translate(-72%, -62%) scale(0.5)' },
+					'100%': { opacity: '1', transform: 'translate(-50%,-40%) scale(1)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'spotlight': 'spotlight 2s ease forwards'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				display: ['Montserrat', 'sans-serif'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
